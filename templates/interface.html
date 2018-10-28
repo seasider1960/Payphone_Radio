@@ -1,0 +1,119 @@
+<!doctype html>
+<head>
+<title>Payphone Radio</title>
+<html charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" type="text/css" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-57x57.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-72x72.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-76x76.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-114x114.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-120x120.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-144x144.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-152x152.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='apple-touch-icon-180x180.png')}}" >
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" >
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script type=text/javascript> // For Ajax functions where no template refresh is needed or wanted
+	 
+        $(function() {
+          $('a#Up').bind('click', function() {
+            $.getJSON('/vol_up',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+
+        $(function() {
+          $('a#Down').bind('click', function() {
+            $.getJSON('/vol_down',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+        
+    </script>
+  
+</head>	
+  
+  <body>
+    <div class="container-fluid">
+      <div class= "row">
+        <div class="col-md-12 jumbotron">
+          <div class="text-center">
+            <h2>WELCOME TO PAYPHONE RADIO</h2>
+           </div>
+         </div> 
+       </div>
+     </div>
+
+    <div class="container">
+    <hr>
+      <div class="text-center">
+      <h4>NOW PLAYING</h4>
+      <img src="{{url_for('static', filename = image )}}">	
+      <hr/>
+        <form method='POST' action='/'>   
+	       <input type="submit" name="submit" class="btn success" value="Radio On" />
+	       <input type="submit" name="submit" class="btn danger" value="Radio Off" />
+		    </form>
+        <hr>  
+        <form>           
+          <a href=# id=Down><button class='btn default'>Volume Down</button></a>
+          <a href=# id=Up><button class='btn default'>Volume Down</button></a>
+        </form>
+        <hr/>
+        <form method='POST' action='/'>    
+	       <img src="/static/images/UK_Flag.png">
+	       <br/>
+	       <p></p>
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 1" />
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 2" />
+         <input type="submit" name="submit" class="btn info" value="BBC Radio 3" />
+         <br/>
+         <p></p>
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 4" />
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 5" />
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 6" />
+	       <br/>
+         <p></p>
+         <input type="submit" name="submit" class="btn info" value="BBC World Service" />
+	       <input type="submit" name="submit" class="btn info" value="BBC Radio 1Extra" />
+	       <br/>
+         <p></p>
+         <input type="submit" name="submit" class="btn info" value="BBC Radio 4Extra" />
+         <input type="submit" name="submit" class="btn info" value="Classic FM" />
+         <hr>
+         <img src="/static/images/US_Flag.png">
+         <br/>
+	       <p></p>
+	       <input type="submit" name="submit" class="btn info" value="WSHU CT NPR" />
+	       <input type="submit" name="submit" class="btn info" value="WNYC NYC NPR" />
+	       <br/>
+	       <p></p>
+	       <input type="submit" name="submit" class="btn info" value="97.9 The Bull" />
+	       <input type="submit" name="submit" class="btn info" value="98Q Danbury" />
+         <hr>
+         <img src="/static/images/CAN_Flag.png">
+         <br/>
+	       <p></p>
+	       <input type="submit" name="submit" class="btn info" value="CBC Radio 1" />
+	       <input type="submit" name="submit" class="btn info" value="CBC Radio 2" />
+	       <input type="submit" name="submit" class="btn info" value="CFRC" />
+	       </div>
+	       </div>
+	       <br><br>	
+        </form>
+      </body>
+
+

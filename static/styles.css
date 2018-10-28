@@ -1,0 +1,91 @@
+
+.jumbotron
+ {
+    background-image:  url("payphone_blur_crop.jpg");
+    color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 100px;
+    margin-top: 0px;
+    margin-bottom:30px;
+    max-width: 100%; 
+    
+}
+
+/*body  {
+    background-image: url("payphone_blur.jpg");
+}
+*/
+
+.btn {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Green */
+.success {
+    border-color: #4CAF50;
+    color: green;
+}
+
+.success:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Blue */
+.info {
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Orange */
+.warning {
+    border-color: #ff9800;
+    color: orange;
+}
+
+.warning:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Red */
+.danger {
+    border-color: #f44336;
+    color: red
+}
+
+.danger:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Gray */
+.default {
+    border-color: #e7e7e7;
+    color: black;
+}
+
+.default:hover {
+    background: #e7e7e7;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+img {
+   padding:1px;
+   border:1px solid #021a40;
+}

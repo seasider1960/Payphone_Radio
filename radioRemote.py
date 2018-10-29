@@ -4,18 +4,12 @@
 from flask import Flask
 from flask import render_template
 from flask import request, url_for, redirect
-from flask_bootstrap import Bootstrap
 from predefines import host, port, templateFile
 from predefines import mpcCommand
 import subprocess
 import sys, os
 import os
 import os.path
-from luma.oled.device import ssd1306, sh1106
-from luma.core.render import canvas
-from PIL import ImageFont
-from PIL import Image
-import graphics
 import time, textwrap
 from datetime import datetime
 
